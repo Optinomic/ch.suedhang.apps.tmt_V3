@@ -18,7 +18,7 @@ website = http://www.optinomic.com/
 
 
 [template TMT 6 12]
-__opapp_include(../lib/polymer/index.m4)
+__opapp_include(lib/polymer/index.m4)
 __opapp_include(elements/element-tmt.html)
 __opapp_include(elements/view.html)
 

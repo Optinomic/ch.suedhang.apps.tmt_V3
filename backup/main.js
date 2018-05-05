@@ -60,7 +60,7 @@ app.controller('AppCtrl', function($scope, $filter, dataService, scopeDService) 
 
         $scope.d.ks = {};
 
-        var ks_file = __opapp_include_as_js_string(includes/ch_suedhang_user_apps_tmt_activated.json)
+        var ks_file = __opapp_include_as_js_string(../includes/ch_suedhang_user_apps_tmt_activated.json)
 
         ks_file = JSON.parse(ks_file);
 
@@ -660,7 +660,7 @@ app.controller('AppCtrl', function($scope, $filter, dataService, scopeDService) 
 
         data_query = {
             name: 'WHQOL-Example (with stay)',
-            sql: __opapp_include_as_js_string(includes/export.sql)
+            sql: __opapp_include_as_js_string(../includes/export.sql)
         };
         module_packages.push(data_query);
 

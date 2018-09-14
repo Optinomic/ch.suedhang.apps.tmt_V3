@@ -12,6 +12,16 @@
                         </md-card-title>
                         <md-divider></md-divider>
                         <md-card-content>
+                            <p class="md-headline">Erhebungsdatum</p>
+                            <md-input-container class="md-block">
+                                <label>Assessment (Erhebungsdatum)</label>
+                                <md-datepicker name="edate" ng-model="result.Erhebungsdatum" md-placeholder="Erhebungsdatum" required></md-datepicker>
+                                <div ng-messages="surveyForm.edate.$error" multiple md-auto-hide="false">
+                                    <div ng-message="required">
+                                        An welchem Datum wurde die Erhebung ausgeführt?
+                                    </div>
+                                </div>
+                            </md-input-container>
                             <p class="md-headline">Messzeitpunkt</p>
                             <md-input-container class="md-block">
                                 <label>Assessment (Erhebung)</label>

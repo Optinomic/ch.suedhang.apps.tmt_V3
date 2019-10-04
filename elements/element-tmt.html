@@ -87,7 +87,12 @@
                         </vaadin-grid-sorter>
                       </template>
                       <template>
-                        <span draggable="true" class="body-1" style="text-align: right">{{_computeNiceDate(item.date)}}</span>
+                        <template is="dom-if" if="{{!item.calculation.tmt_score.response.data.response.Erhebungsdatum}}">
+                          <span draggable="true" class="body-1" style="text-align: right">{{_computeNiceDate(item.date)}}</span>
+                        </template>
+                        <template is="dom-if" if="{{item.calculation.tmt_score.response.data.response.Erhebungsdatum)}}">
+                          <span draggable="true" class="body-1" style="text-align: right">{{_computeNiceDate(item.calculation.tmt_score.response.data.response.Erhebungsdatum)}}</span>
+                        </template>
                       </template>
                     </vaadin-grid-column>
                     <vaadin-grid-column width="180px" flex-grow="0">
@@ -125,6 +130,16 @@
                         <span draggable="true" class="body-1">[[item.calculation.tmt_score.TMTAError]]</span>
                       </template>
                     </vaadin-grid-column>
+                    <vaadin-grid-column>
+                      <template class="header">
+                        <vaadin-grid-sorter path="calculation.tmt_score.TMTAError">
+                          <span class="body-1" stlye="color:#424242;font-weight:400;">Z-Wert</span>
+                        </vaadin-grid-sorter>
+                      </template>
+                      <template>
+                        <span draggable="true" class="body-1">[[item.calculation.tmt_score.percentile.z_scores.tmtA_z_neu_rounded]]</span>
+                      </template>
+                    </vaadin-grid-column>
                   </vaadin-grid-column-group>
                   <vaadin-grid-column-group>
                     <template class="header">
@@ -148,6 +163,16 @@
                       </template>
                       <template>
                         <span draggable="true" class="body-1">[[item.calculation.tmt_score.TMTBError]]</span>
+                      </template>
+                    </vaadin-grid-column>
+                    <vaadin-grid-column>
+                      <template class="header">
+                        <vaadin-grid-sorter path="calculation.tmt_score.TMTAError">
+                          <span class="body-1" stlye="color:#424242;font-weight:400;">Z-Wert</span>
+                        </vaadin-grid-sorter>
+                      </template>
+                      <template>
+                        <span draggable="true" class="body-1">[[item.calculation.tmt_score.percentile.z_scores.tmtB_z_neu_rounded]]</span>
                       </template>
                     </vaadin-grid-column>
                   </vaadin-grid-column-group>

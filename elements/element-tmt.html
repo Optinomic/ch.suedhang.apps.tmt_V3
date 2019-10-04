@@ -87,12 +87,7 @@
                         </vaadin-grid-sorter>
                       </template>
                       <template>
-                        <template is="dom-if" if="{{!item.calculation.tmt_score.response.data.response.Erhebungsdatum}}">
-                          <span draggable="true" class="body-1" style="text-align: right">{{_computeNiceDate(item.date)}}</span>
-                        </template>
-                        <template is="dom-if" if="{{item.calculation.tmt_score.response.data.response.Erhebungsdatum)}}">
-                          <span draggable="true" class="body-1" style="text-align: right">{{_computeNiceDate(item.calculation.tmt_score.response.data.response.Erhebungsdatum)}}</span>
-                        </template>
+                        <span draggable="true" class="body-1" style="text-align: right">{{_computeNiceDate(item.date)}}</span>
                       </template>
                     </vaadin-grid-column>
                     <vaadin-grid-column width="180px" flex-grow="0">

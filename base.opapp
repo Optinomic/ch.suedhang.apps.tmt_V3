@@ -6,6 +6,7 @@ version = __opapp_version()
 type = patient
 
 [description]
+Mit dem TMT wird die Fähigkeit zum visuellen Scannen, die psychomotorische Geschwindigkeit (TMT A) sowie die Leistungen der exekutiven Funktionen, insbesondere kognitive Flexibilität und Switching (TMT B) erfasst.
 
 [developer]
 first_name = Beat
@@ -18,9 +19,7 @@ website = http://www.optinomic.com/
 
 
 [template TMT 6 12]
-__opapp_include(lib/polymer/index.m4)
-__opapp_include(elements/element-tmt.html)
-__opapp_include(elements/view.html)
+__opapp_include(optinomic_lib/dist/templates/ch.suedhang.apps.tmt.html)
 
 
 [readme]
